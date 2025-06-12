@@ -188,3 +188,37 @@ body {
     opacity: 1;
     pointer-events: auto;
 }
+
+/* --- フローティングプロンプトリンク用スタイル --- */
+.prompt-links {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 6px 8px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+.prompt-links a {
+    color: #fff;
+    margin: 0 4px;
+    font-size: 12px;
+    text-decoration: none;
+}
+.prompt-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .prompt-links {
+        flex-direction:column;
+        bottom: 10px;
+    }
+    .prompt-links a {
+        margin: 4px 0;
+    }
+}
